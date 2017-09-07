@@ -10,5 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBAction func digitButtonPushed(_ sender: UIButton) {
+    }
+    
+    
+    
 }
 
