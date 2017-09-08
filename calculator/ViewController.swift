@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
     
+    var userIsInMiddleOfTyping : Bool = false
+    
     @IBAction func digitButtonPushed(_ sender: UIButton) {
         let digit : String = sender.currentTitle!
         let currentDisplayText = display!.text!
