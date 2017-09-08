@@ -16,8 +16,15 @@ class ViewController: UIViewController {
     
     @IBAction func digitButtonPushed(_ sender: UIButton) {
         let digit : String = sender.currentTitle!
-        let currentDisplayText = display!.text!
-        display!.text = currentDisplayText + digit
+        
+        if userIsInMiddleOfTyping {
+            let currentDisplayText = display.text!
+            display.text = currentDisplayText + digit
+        } else {
+            display.text = digit
+        }
+        
+        userIsInMiddleOfTyping = true
     }
     
     
