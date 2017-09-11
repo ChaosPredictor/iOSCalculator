@@ -8,15 +8,26 @@
 
 import Foundation
 
-class calculatorModel {
+class CalculatorModel {
     
-    func setOperand(operand: Double) { }
+    private var accumulator = 0.0
     
-    func performOperation(symbol: String) { }
+    func setOperand(operand: Double) {
+        accumulator = operand
+    }
+    
+    func performOperation(symbol: String) {
+        switch symbol {
+        case "π": accumulator = Double.pi
+        case "√": accumulator = sqrt(accumulator)
+        default:
+            accumulator = 0.0
+        }
+    }
     
     var result: Double {
         get {
-            return 0.0
+            return accumulator
         }
     }
 }
