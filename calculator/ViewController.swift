@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var display: UILabel!
     
-    var userIsInMiddleOfTyping : Bool = false
+    private var userIsInMiddleOfTyping : Bool = false
     
     @IBAction private func digitButtonPushed(_ sender: UIButton) {
         let digit : String = sender.currentTitle!

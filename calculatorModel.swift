@@ -12,7 +12,7 @@ class calculatorModel {
     
     func setOperand(operand: Double) { }
     
-    func performOperation(symbol: Strung) { }
+    func performOperation(symbol: String) { }
     
     var result: Double {
         get {
