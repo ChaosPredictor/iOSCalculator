@@ -14,6 +14,7 @@
 		AF6939F71F60955500BAF807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6939F51F60955500BAF807 /* LaunchScreen.storyboard */; };
 		AF693A021F60955500BAF807 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF693A011F60955500BAF807 /* calculatorTests.swift */; };
 		AF693A0D1F60955500BAF807 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF693A0C1F60955500BAF807 /* calculatorUITests.swift */; };
+		AF6D7A411F66FAC600E4FB64 /* calculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D7A401F66FAC600E4FB64 /* calculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AF693A081F60955500BAF807 /* calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF693A0C1F60955500BAF807 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		AF693A0E1F60955500BAF807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6D7A401F66FAC600E4FB64 /* calculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		AF6939E01F60955500BAF807 = {
 			isa = PBXGroup;
 			children = (
+				AF6D7A401F66FAC600E4FB64 /* calculatorModel.swift */,
 				AF6939EB1F60955500BAF807 /* calculator */,
 				AF693A001F60955500BAF807 /* calculatorTests */,
 				AF693A0B1F60955500BAF807 /* calculatorUITests */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6D7A411F66FAC600E4FB64 /* calculatorModel.swift in Sources */,
 				AF6939EF1F60955500BAF807 /* ViewController.swift in Sources */,
 				AF6939ED1F60955500BAF807 /* AppDelegate.swift in Sources */,
 			);
@@ -524,6 +528,7 @@
 				AF693A131F60955500BAF807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF693A141F60955500BAF807 /* Build configuration list for PBXNativeTarget "calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				AF693A161F60955500BAF807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF693A171F60955500BAF807 /* Build configuration list for PBXNativeTarget "calculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				AF693A191F60955500BAF807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
