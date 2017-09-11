@@ -76,10 +76,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF6939E01F60955500BAF807 = {
+		AF5215221F67183100D977D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				AF6D7A401F66FAC600E4FB64 /* calculatorModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AF5215231F67184000D977D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF6939EE1F60955500BAF807 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AF5215241F67185200D977D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF6939F01F60955500BAF807 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AF6939E01F60955500BAF807 = {
+			isa = PBXGroup;
+			children = (
 				AF6939EB1F60955500BAF807 /* calculator */,
 				AF693A001F60955500BAF807 /* calculatorTests */,
 				AF693A0B1F60955500BAF807 /* calculatorUITests */,
@@ -100,9 +123,10 @@
 		AF6939EB1F60955500BAF807 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				AF5215221F67183100D977D6 /* Model */,
 				AF693A1A1F60957000BAF807 /* Supporting Files */,
-				AF6939EE1F60955500BAF807 /* ViewController.swift */,
-				AF6939F01F60955500BAF807 /* Main.storyboard */,
+				AF5215231F67184000D977D6 /* Controller */,
+				AF5215241F67185200D977D6 /* View */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
