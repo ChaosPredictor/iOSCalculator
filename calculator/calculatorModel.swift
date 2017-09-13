@@ -19,13 +19,13 @@ class CalculatorModel {
     var operations: Dictionary<String,Operation> = [
         "π" : Operation.Constant(Double.pi),
         "e" : Operation.Constant(M_E),
-        "√" : Operation.UnaryOperation,
-        "cos" : Operation.UnaryOperation
+        "√" : Operation.UnaryOperation(sqrt),
+        "cos" : Operation.UnaryOperation(cos)
     ]
     
     enum Operation {
         case Constant(Double)
-        case UnaryOperation
+        case UnaryOperation((Double) -> Double)
         case BinaryOperation
         case Equals
     }
@@ -34,7 +34,7 @@ class CalculatorModel {
         if let operation = operations[symbol] {
             switch operation {
             case .Constant(let value): accumulator = value
-            case .UnaryOperation: break
+            case .UnaryOperation(let function): accumulator = function(accumulator)
             case .BinaryOperation: break
             case .Equals: break
             }
