@@ -8,17 +8,15 @@
 
 import Foundation
 
-func multiply
-
 class CalculatorModel {
     
     private var accumulator = 0.0
     
-    func setOperand(operand: Double) {
+    private func setOperand(operand: Double) {
         accumulator = operand
     }
     
-    var operations: Dictionary<String,Operation> = [
+    private var operations: Dictionary<String,Operation> = [
         "π" : Operation.Constant(Double.pi),
         "e" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
@@ -30,7 +28,7 @@ class CalculatorModel {
         "=" : Operation.Equals
     ]
     
-    enum Operation {
+    private enum Operation {
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
         case BinaryOperation((Double,Double) -> Double)
@@ -62,7 +60,7 @@ class CalculatorModel {
     
     private var pending: PendingBinaryOperationInfo?
     
-    struct PendingBinaryOperationInfo {
+    private struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
