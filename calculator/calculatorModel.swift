@@ -12,7 +12,7 @@ class CalculatorModel {
     
     private var accumulator = 0.0
     
-    private func setOperand(operand: Double) {
+    func setOperand(operand: Double) {
         accumulator = operand
     }
     
