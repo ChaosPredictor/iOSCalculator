@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var display: UILabel!
     
     var userIsInMiddleOfTyping : Bool = false
+    var fractionalPart = false
     
     @IBAction private func digitButtonPushed(_ sender: UIButton) {
         let digit : String = sender.currentTitle!
@@ -42,18 +43,20 @@ class ViewController: UIViewController {
         if userIsInMiddleOfTyping {
             model.setOperand(operand: displayValue)
             userIsInMiddleOfTyping = false
+            fractionalPart = false
         }
         if let mathematicalSymbol = sender.currentTitle {
             model.performOperation(symbol: mathematicalSymbol)
-//            if mathematicalSymbol == "π" {
-//                displayValue = Double.pi
-//            } else if mathematicalSymbol == "√" {
-//                displayValue = sqrt(displayValue)
-//            }
         }
         displayValue = model.result
     }
     
+    @IBAction func radixPoint(_ sender: UIButton) {
+        if !fractionalPart {
+            display.text = display.text! + "."
+        }
+        fractionalPart = true
+    }
     
 }
 
